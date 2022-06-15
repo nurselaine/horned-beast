@@ -13,6 +13,7 @@ class Main extends React.Component{
           url={beast.image_url}
           description={beast.description}
           key={idx}
+          handleOnShowModal={this.props.handleOnShowModal}
         />
       )
     });

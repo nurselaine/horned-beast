@@ -1,12 +1,28 @@
-figure {
+Card {
   border: 1 px solid red;
+  background-color: antiquewhite;
   padding: 1vw;
   text-align: center;
   width: 20vw;
   height: auto;
 }
 
- h2{
+div.beast-card{
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.card{
+  /* margin: revert; */
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  box-sizing: border-box;
+  /* position: relative; */
+  /* display: block; */
+}
+
+ Card.title{
   margin: none;
   border: 1px solid black;
 }
@@ -28,7 +44,10 @@ figure {
   font-size: 1rem;
   margin:auto;
   display:block;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 10vw;
+}
+#fav-btn{
+  margin-bottom: none;
 }
 
