@@ -1,0 +1,20 @@
+article {
+  border: 1 px solid gray;
+  padding: 1vw;
+  text-align: center;
+}
+
+article img{
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid black;
+}
+
+article p{
+  font-size: 11px;
+  margin: auto;
+  display: inline-block;
+  border: 1px solid black;
+  max-width: 20vw;
+}
+
