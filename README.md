@@ -1,8 +1,9 @@
 # Horned Animals Info Page
 Web-tool created for users to learn and read about different horned animals. 
 
+Used this [tutorial](https://www.codeply.com/go/bp/118335) using bootstrap to help create a tumblr like grid of the images
 
-## Feautre:
+## Feature:
 #### Display Images
 
 Estimate of time needed to complete: 20 min
@@ -27,9 +28,18 @@ Estimate of time needed to complete: 1hour
 
 Start time: 8:50
 
-Finish time: _____
+Finish time: 9:20
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30min
+#### Display A Model
+
+Estimate of time needed to complete: 30 min
+
+Start time: 2pm
+
+Finish time: 3:15pm
+
+Actual time needed to complete: 1hr and 15min
 #### Stretch Goal
 Number and name of feature: ________________________________
 
@@ -40,3 +50,4 @@ Start time: _____
 Finish time: _____
 
 Actual time needed to complete: _____
+
