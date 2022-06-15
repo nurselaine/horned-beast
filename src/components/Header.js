@@ -1,12 +1,17 @@
 import React from 'react';
+import './Header.css';
+import Slideshow from './Slideshow';
 
 class Header extends React.Component{
   render(){
     return(
-      <Header>
+      <header>
         <h1>ZOOPEDIA</h1>
         <h3>DISCOVER THE VARIED SPECIES AVAILABLE IN PLANET ZOO</h3>
-      </Header>
+        <div>
+          <Slideshow/>
+        </div>
+      </header>
     )
   }
 }

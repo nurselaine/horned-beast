@@ -4,7 +4,6 @@ Web-tool created for users to learn and read about different horned animals.
 
 ## Feautre:
 #### Display Images
-Number and name of feature: ________________________________
 
 Estimate of time needed to complete: 20 min
 
@@ -14,21 +13,19 @@ Finish time: 5:25
 
 Actual time needed to complete: 10min
 #### Allow users to vote
-Number and name of feature: ________________________________
 
 Estimate of time needed to complete: 30min
 
 Start time: 5:35
 
-Finish time: _____
+Finish time: 8.48
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3 hours (got stuck because of a bug for 2 hours)
 #### Bootstrap
-Number and name of feature: ________________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1hour
 
-Start time: _____
+Start time: 8:50
 
 Finish time: _____
 
