@@ -18,10 +18,14 @@ class App extends React.Component {
       selectedUrl: '',
       selectedDescription: '',
       showModal: false,
+      userSearchInput: '',
     };
+  }
 
-    
-
+  handleSearchInput = (e) => {
+    this.setState({
+      userSearchInput: e.target.value
+    })
   }
 
   handleOnHide = () => {
@@ -44,8 +48,14 @@ class App extends React.Component {
   render(){
     return (
       <>
-        <Header/>
-        <Main handleOnShowModal={this.handleOnShowModal}/>
+        <Header 
+          searchValue={this.state.userSearchInput}
+          handleSearchInput={this.handleSearchInput}
+        />
+        <Main 
+          handleOnShowModal={this.handleOnShowModal}
+          searchValue={this.state.userSearchInput}
+        />
         <Footer/>
         <SelectedBeast
           name={this.state.selectedBeast}

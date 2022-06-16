@@ -4,9 +4,19 @@ import data from '../data.json';
 import "./Main.css";
 
 class Main extends React.Component{
+
+  filterBeast = (filterTerm) => {
+    if (filterTerm){
+      const filteredResult = data.filter((beast) => beast.keyword === filterTerm)
+      return filteredResult;
+    } else {
+      return data;
+    }
+  }
   render(){
     let beasts = [];
-    data.forEach((beast, idx) => {
+    let filteredData = this.filterBeast(this.props.searchValue);
+    filteredData.forEach((beast, idx) => {
       beasts.push(
         <HornedBeast 
           title={beast.title}
