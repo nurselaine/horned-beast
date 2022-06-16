@@ -6,16 +6,23 @@ import "./Main.css";
 class Main extends React.Component{
 
   filterBeast = (filterTerm) => {
-    if (filterTerm){
-      const filteredResult = data.filter((beast) => beast.keyword === filterTerm)
-      return filteredResult;
-    } else {
-      return data;
+    let filteredBeast = data;
+    if (filterTerm){ // only to handle search, TODO: fix errors 
+      filteredBeast = filteredBeast.filter((beast) => beast.keyword === filterTerm);
+    } 
+  
+    if(this.props.selectedHorn){
+      let horns = this.props.selectedHorn;
+      filteredBeast = filteredBeast.filter(beast => beast.horns === horns);
     }
+
+    return filteredBeast;
   }
+
   render(){
     let beasts = [];
     let filteredData = this.filterBeast(this.props.searchValue);
+
     filteredData.forEach((beast, idx) => {
       beasts.push(
         <HornedBeast 

@@ -2,13 +2,10 @@
 import React from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import Footer from './components/Footer';
-import selectedBeast from './components/SelectedBeast';
-import data from './data.json';
 import './App.css';
 import SelectedBeast from './components/SelectedBeast';
+import HornForm from './components/HornForm.js';
 
 class App extends React.Component {
   constructor(props){
@@ -19,6 +16,7 @@ class App extends React.Component {
       selectedDescription: '',
       showModal: false,
       userSearchInput: '',
+      numberOfHorns: 0,
     };
   }
 
@@ -26,6 +24,13 @@ class App extends React.Component {
     this.setState({
       userSearchInput: e.target.value
     })
+  }
+
+  handleSelectedHorns = (e) => {
+    // console.log(e.target.value);
+    this.setState({
+      numberOfHorns: +e.target.value,
+    });
   }
 
   handleOnHide = () => {
@@ -42,19 +47,27 @@ class App extends React.Component {
       selectedUrl: url,
       selectedDescription: description
     });
+    console.log(this.state.selectedBeast);
   }
 
 
   render(){
+    console.log('state', this.state);
     return (
       <>
         <Header 
           searchValue={this.state.userSearchInput}
           handleSearchInput={this.handleSearchInput}
         />
+        <HornForm 
+          onChange={this.handleSelectedHorns} 
+          onSearch={this.handleSearchInput} 
+          searchValue={this.state.userSearchInput}
+          />
         <Main 
           handleOnShowModal={this.handleOnShowModal}
           searchValue={this.state.userSearchInput}
+          selectedHorn={this.state.numberOfHorns}
         />
         <Footer/>
         <SelectedBeast
