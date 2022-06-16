@@ -5,8 +5,10 @@ import Main from './components/Main';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Footer from './components/Footer';
+import selectedBeast from './components/SelectedBeast';
 import data from './data.json';
 import './App.css';
+import SelectedBeast from './components/SelectedBeast';
 
 class App extends React.Component {
   constructor(props){
@@ -18,9 +20,12 @@ class App extends React.Component {
       showModal: false,
     };
 
+    
+
   }
 
   handleOnHide = () => {
+    console.log("onHide");
     this.setState({
       showModal: false,
     })
@@ -42,29 +47,14 @@ class App extends React.Component {
         <Header/>
         <Main handleOnShowModal={this.handleOnShowModal}/>
         <Footer/>
-        <Modal 
-          onHide={this.handleOnHide} 
-          show={this.state.showModal}
-          onClick={this.handleOnShowModal}
-        >
-          <Modal.Header closeButton>
-            <Modal.Title>{this.state.selectedBeast}</Modal.Title>
-          </Modal.Header>
-
-          <Modal.Body>
-            <img 
-              src={this.state.selectedUrl}
-              alt={this.state.selectedBeast}
-              id='modal-img'
-            />
-            <p id='modal-description'>{this.state.selectedDescription}</p>
-          </Modal.Body>
-
-          <Modal.Footer>
-            <Button variant="secondary">Close</Button>
-            <Button variant="primary">Save changes</Button>
-          </Modal.Footer>
-        </Modal>
+        <SelectedBeast
+          name={this.state.selectedBeast}
+          url={this.state.selectedUrl}
+          description={this.state.selectedDescription}
+          showModal={this.state.showModal}
+          // handleOnShowModal={this.handleOnShowModal}
+          onHide={this.handleOnHide}
+        />
       </>
     );
   }
