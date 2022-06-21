@@ -41,13 +41,13 @@ Finish time: 3:15pm
 
 Actual time needed to complete: 1hr and 15min
 #### Stretch Goal
-Number and name of feature: ________________________________
+Number and name of feature: 20min
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 12:45
 
-Start time: _____
+Start time: 12:45
 
-Finish time: _____
+Finish time: 01:00
 
-Actual time needed to complete: _____
+Actual time needed to complete: 15 min
 
