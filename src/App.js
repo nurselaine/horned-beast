@@ -27,7 +27,6 @@ class App extends React.Component {
   }
 
   handleSelectedHorns = (e) => {
-    // console.log(e.target.value);
     this.setState({
       numberOfHorns: +e.target.value,
     });
